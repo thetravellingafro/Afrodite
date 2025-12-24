@@ -1,10 +1,44 @@
-body { margin: 0; font-family: Arial, sans-serif; height: 100vh; display: flex; flex-direction: column; }
-header { display: flex; align-items: center; background: #fafafa; border-bottom: 1px solid #dbdbdb; padding: 10px; }
-header .logo { height: 30px; margin-right: 10px; }
-iframe { flex: 1; border: none; width: 100%; }
-#password-screen { display: flex; justify-content: center; align-items: center; height: 100%; background: #fafafa; }
-.password-box { background: white; padding: 40px; border-radius: 10px; box-shadow: 0 3px 10px rgba(0,0,0,0.2); text-align: center; }
-.password-box input { padding: 10px; width: 200px; margin: 15px 0; border: 1px solid #ccc; border-radius: 5px; }
-.password-box button { padding: 10px 20px; background: #3897f0; color: white; border: none; border-radius: 5px; cursor: pointer; }
-.password-box button:hover { background: #2a6ebd; }
-#error-msg { color: red; font-size: 14px; margin-top: 10px; }
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: Arial, sans-serif;
+  background-color: #fafafa;
+  margin: 0;
+}
+
+.container {
+  text-align: center;
+  background: white;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 3px 15px rgba(0,0,0,0.2);
+}
+
+input {
+  padding: 10px;
+  width: 200px;
+  margin: 15px 0;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #3897f0;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #2a6ebd;
+}
+
+#error-msg {
+  color: red;
+  margin-top: 10px;
+}
