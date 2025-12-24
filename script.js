@@ -1,4 +1,4 @@
-const correctPassword = "YOUR_PASSWORD"; // change this
+const correctPassword = "AFRODITE_HELPER"; // change this
 
 const pwScreen = document.getElementById('password-screen');
 const chatContainer = document.getElementById('chat-container');
