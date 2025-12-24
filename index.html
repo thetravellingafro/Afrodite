@@ -4,47 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Afrodite AI Access</title>
-<style>
-  body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    font-family: Arial, sans-serif;
-    background-color: #fafafa;
-    margin: 0;
-  }
-  .container {
-    text-align: center;
-    background: white;
-    padding: 40px;
-    border-radius: 10px;
-    box-shadow: 0 3px 15px rgba(0,0,0,0.2);
-  }
-  input {
-    padding: 10px;
-    width: 200px;
-    margin: 15px 0;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-  }
-  button {
-    padding: 10px 20px;
-    background-color: #3897f0;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    font-weight: bold;
-    cursor: pointer;
-  }
-  button:hover {
-    background-color: #2a6ebd;
-  }
-  #error-msg {
-    color: red;
-    margin-top: 10px;
-  }
-</style>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 <div class="container" id="password-screen">
@@ -55,32 +15,6 @@
   <p id="error-msg"></p>
 </div>
 
-<script>
-const correctPassword = "Afrodite123"; // set your password
-const passwordScreen = document.getElementById('password-screen');
-const input = document.getElementById('password-input');
-const submitBtn = document.getElementById('submit-password');
-const errorMsg = document.getElementById('error-msg');
-
-// If already logged in, skip password
-if(localStorage.getItem('aiAccess') === 'granted'){
-  window.open("https://aistudio.instagram.com/ai/3952982205025189/?utm_source=mshare", "_blank");
-}
-
-// Check password on submit
-submitBtn.addEventListener('click', () => {
-  if(input.value === correctPassword){
-    localStorage.setItem('aiAccess', 'granted'); // persist access
-    window.open("https://aistudio.instagram.com/ai/3952982205025189/?utm_source=mshare", "_blank");
-  } else {
-    errorMsg.textContent = "Incorrect password, try again.";
-  }
-});
-
-// Enter key
-input.addEventListener('keypress', e => {
-  if(e.key === 'Enter') submitBtn.click();
-});
-</script>
+<script src="script.js"></script>
 </body>
 </html>
