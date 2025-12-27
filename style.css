@@ -1,21 +1,39 @@
+/* Page background */
 body {
   display: flex;
   justify-content: center;
-  align-items: center;
-  height: 100vh;
+  align-items: flex-start; /* banner on top, container below */
+  flex-direction: column;
+  min-height: 100vh;
   font-family: Arial, sans-serif;
-  background-color: #fafafa;
+  background-color: black; /* black page background */
   margin: 0;
+  padding: 0;
 }
 
+/* Banner styling */
+.banner {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6); /* smooth fade into black */
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+/* Password container styling */
 .container {
   text-align: center;
   background: white;
   padding: 40px;
   border-radius: 10px;
-  box-shadow: 0 3px 15px rgba(0,0,0,0.2);
+  box-shadow: 0 3px 15px rgba(0,0,0,0.5);
+  margin: -40px auto 40px auto; /* slightly overlaps banner */
+  max-width: 400px;
 }
 
+/* Inputs and buttons (from original) */
 input {
   padding: 10px;
   width: 200px;
@@ -41,4 +59,22 @@ button:hover {
 #error-msg {
   color: red;
   margin-top: 10px;
+}
+
+/* Instruction and login button */
+.instruction {
+  font-size: 14px;
+  margin-bottom: 12px;
+  color: #eee; /* readable on black background */
+}
+
+.ig-login-btn {
+  display: inline-block;
+  margin-bottom: 18px;
+  padding: 10px 18px;
+  background-color: #e1306c;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: bold;
 }
