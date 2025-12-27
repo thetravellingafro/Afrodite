@@ -17,7 +17,7 @@ submitBtn.addEventListener('click', () => {
 
     // Show instruction to type message
     setTimeout(() => {
-      alert('Start by typing this message in the AI: "hi there, afrodite"');
+      alert('Type this message to wake her up: "hi there, afrodite"');
     }, 1000);
 
   } else {
@@ -36,6 +36,6 @@ if(localStorage.getItem('aiAccess') === 'granted'){
     "_blank"
   );
   setTimeout(() => {
-    alert('Start by typing this message in the AI: "hi there, afrodite"');
+    alert('Type this message to wake her up: "hi there, afrodite"');
   }, 1000);
 }
