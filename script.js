@@ -5,37 +5,38 @@ const correctPassword = "AFRODITE_HELPER";
 const input = document.getElementById('password-input');
 const submitBtn = document.getElementById('submit-password');
 const errorMsg = document.getElementById('error-msg');
-const aiPromptBox = document.getElementById('ai-prompt-box'); // Add this div in HTML under password container
 
 // Wake-up message
 const wakeMessage = 'Type this message to wake her up: "hi there, afrodite"';
 
-// Function to handle password submission
+// Handle password submission
 function handlePassword() {
   if (input.value === correctPassword) {
 
-    // Save access in localStorage
+    // Save access
     localStorage.setItem('aiAccess', 'granted');
 
-    // Show instructions in-page instead of alert
-    aiPromptBox.textContent = wakeMessage;
+    // Open Instagram AI in new tab
+    window.open(
+      "https://aistudio.instagram.com/ai/3952982205025189/?utm_source=mshare",
+      "_blank"
+    );
 
-    // Provide a clickable link for the AI Studio (user must be logged in)
-    aiPromptBox.innerHTML += `<br><a href="https://aistudio.instagram.com/ai/3952982205025189/?utm_source=mshare" target="_blank" class="ig-login-btn">Open AI Studio</a>`;
+    // Show popup alert
+    alert(wakeMessage);
 
-    // Clear previous error
+    // Clear any previous error
     errorMsg.textContent = "";
 
   } else {
-    // Show error if password incorrect
     errorMsg.textContent = "Incorrect password";
   }
 }
 
-// Click event for Enter button
+// Click event
 submitBtn.addEventListener('click', handlePassword);
 
-// Enter key press triggers Enter button
+// Enter key triggers submit
 input.addEventListener('keypress', e => {
   if (e.key === 'Enter') handlePassword();
 });
