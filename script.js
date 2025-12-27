@@ -24,6 +24,9 @@ submitBtn.addEventListener('click', () => {
       sessionStorage.setItem('popupShown', 'true');
     }
 
+    // Clear error message if previously incorrect
+    errorMsg.textContent = "";
+
   } else {
     errorMsg.textContent = "Incorrect password";
   }
