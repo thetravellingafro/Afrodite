@@ -5,8 +5,9 @@ const correctPassword = "AFRODITE_HELPER";
 const input = document.getElementById('password-input');
 const submitBtn = document.getElementById('submit-password');
 const errorMsg = document.getElementById('error-msg');
+const aiPromptBox = document.getElementById('ai-prompt-box'); // Add this div in HTML under password container
 
-// Wake-up message to show in alert
+// Wake-up message
 const wakeMessage = 'Type this message to wake her up: "hi there, afrodite"';
 
 // Function to handle password submission
@@ -16,14 +17,11 @@ function handlePassword() {
     // Save access in localStorage
     localStorage.setItem('aiAccess', 'granted');
 
-    // Open Instagram AI in a new tab (user click triggered)
-    window.open(
-      "https://aistudio.instagram.com/ai/3952982205025189/?utm_source=mshare",
-      "_blank"
-    );
+    // Show instructions in-page instead of alert
+    aiPromptBox.textContent = wakeMessage;
 
-    // Show alert popup
-    alert(wakeMessage);
+    // Provide a clickable link for the AI Studio (user must be logged in)
+    aiPromptBox.innerHTML += `<br><a href="https://aistudio.instagram.com/ai/3952982205025189/?utm_source=mshare" target="_blank" class="ig-login-btn">Open AI Studio</a>`;
 
     // Clear previous error
     errorMsg.textContent = "";
@@ -41,6 +39,3 @@ submitBtn.addEventListener('click', handlePassword);
 input.addEventListener('keypress', e => {
   if (e.key === 'Enter') handlePassword();
 });
-
-// Optional: You can still show a persistent instruction box in HTML under the password box
-// so users know what to type first, even for new users.
