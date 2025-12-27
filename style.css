@@ -61,7 +61,7 @@ button:hover {
   margin-top: 10px;
 }
 
-/* Instruction text */
+/* Instruction text above the password box */
 .instruction {
   font-size: 14px;
   margin-bottom: 12px;
@@ -86,9 +86,9 @@ button:hover {
   font-weight: bold;
 }
 
-/* AI prompt message / floating instruction box */
+/* AI prompt message / floating instruction box below Enter button */
 #ai-prompt-box {
-  background: #f0f0f0; /* light grey box for readability */
+  background: #f0f0f0; /* light grey box */
   color: #000; /* black text */
   font-weight: 500;
   font-size: 15px;
