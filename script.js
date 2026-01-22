@@ -1,5 +1,5 @@
 // Correct password
-const correctPassword = "AFRODITEHELP";
+const correctPassword = "AFRODITE_HELPER";
 
 // DOM elements
 const input = document.getElementById('password-input');
